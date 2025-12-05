@@ -232,14 +232,14 @@
 	  
 	  //Создаем настройки инструмента поиска по карте
 		const searchControl = new L.Control.Search({
-			layer: searchLayer, //Указываем переменную, содержащую добавленный на карту слой GeoJSON, по свойствам которого будет производиться поиск
-			propertyName: 'Название субъекта РФ', //Указываем имя столбца, по значениям которого будет производиться поиск
+			layer: searchLayer, 
+			propertyName: 'Название субъекта РФ', 
 			marker: false,
-			textPlaceholder: 'Поиск', //Указываем текст, который указывается в окне поиска по умолчанию
-			position: 'topleft', //Указываем положение кнопки поиска в окне карты
+			textPlaceholder: 'Поиск', 
+			position: 'topleft', 
 			moveToLocation: function(latlng, title, map) {
 				const zoom = map.getBoundsZoom(latlng.layer.getBounds());
-				map.setView(latlng, zoom); // функция, масштабирующая окно карты на объект, являющийся результатом поиска
+				map.setView(latlng, zoom); 
 			}
 		});
 		
@@ -285,6 +285,7 @@
 	  
 
 	  
+
 
 
 
