@@ -265,9 +265,9 @@
 		
 		//Указываем настройки для кнопки возвращения на стартовые координаты карты
 		const homeControl = L.easyButton('fa-home', function(btn, map){
-			map.flyTo(mapOptions.center, mapOptions.zoom, { //функция, создающая анимацию в виде полета над картой
+			map.flyTo(mapOptions.center, mapOptions.zoom, { 
 				animate: true,
-				duration: 1 // задаем длительность анимации в секундах
+				duration: 1 //
 			});
 		});
 		
@@ -276,6 +276,7 @@
 	  
 
 	  
+
 
 
 
