@@ -6,9 +6,6 @@
 	  
 	  //Создаем карту как объект
 	  const map = new L.map('map', mapOptions);
-	  
-	  
-	  
 	  //Создаем 1-ю подложку как объект
 	  const basemap1 = new L.TileLayer('https://tile2.maps.2gis.com/tiles?x={x}&y={y}&z={z}&v=1.1', {attribution: '&copy; <a href="https://2gis.ru">2GIS</a>'});
 	  
@@ -95,8 +92,6 @@
 			layer.bindPopup(String(feature.properties.load_per_vacancy))
 		}
 	  })
-
-
 	  //Создание легенды
 	  const legend = L.control({ position: 'bottomright' });
 
@@ -157,9 +152,7 @@
 			<ellipse stroke="#000" ry="8.92943" rx="8.50167" id="svg_1" cy="10.00532" cx="10.08175" fill="none"/>
 			<ellipse stroke="#000" ry="4.55198" rx="4.59375" id="svg_2" cy="10.08363" cx="9.98968" fill="#000000"/>
 			</g>
-
 		</svg>`
-	  
 	  
 	   //Создаем параметры иконки
 	   const admIcon = new L.Icon({
@@ -167,7 +160,6 @@
 			iconSize: [20, 20] //размер иконки в пикселях
 		});
 	   
-	  
 	   //С помощь цикла for заполняем тематический слой маркерами с координатами административных центров из созданного массивами, с добавлением всплывающего окна с названием центра
 	   for (let i = 0; i < points.length; i++) {
        const [lat, lng, popupText, wikiUrl] = points[i];
@@ -195,7 +187,6 @@
 			"Административные центры": admin_centers
 			}
 		};
-
 
 	  //Создаем настройки для группировки, чтобы единовременно на карте отображалась только одна картограмма
 	  const options = {
@@ -285,6 +276,7 @@
 	  
 
 	  
+
 
 
 
