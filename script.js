@@ -14,6 +14,9 @@
 	  
 	  //Создаем 2-ю подложку как объект
 	   const basemap2 = new L.TileLayer('https://core-renderer-tiles.maps.yandex.net/tiles?l=map&x={x}&y={y}&z={z}&scale=1&lang=ru_RU', { attribution: '&copy; <a href="https://yandex.ru/maps/">Яндекс.Карты</a>'});
+      
+      //Создаем 3-ю подложку как объект
+	  const basemap1 = new L.TileLayer('http://a.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png', { attribution: '&copy; <a href="https://cartodb.com/basemaps/">CartoDB</a> Contributors' });
 	  
 	  //Добавляем 1-ю подложку на карту (она будет отображаться при открытии карты)
 	  map.addLayer(basemap1);
@@ -22,6 +25,7 @@
 	  const baseLayers = {
         "2GIS": basemap1,
         "Яндекс.Карты": basemap2,
+	    "CartoDB": basemap3,
        };
 	   //Добавляем линейный масштаб на карту
 	  L.control.scale({imperial: false, position: 'bottomleft'}).addTo(map);
@@ -279,4 +283,5 @@
 		//Добавляем кнопку возвращения на карту
 		homeControl.addTo(map);
 	  
+
 	  
